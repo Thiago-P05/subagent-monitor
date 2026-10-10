@@ -1,0 +1,10 @@
+{
+  "name": "opencode-subagent-monitor",
+  "type": "module",
+  "exports": {
+    "./tui": "./tui.js"
+  },
+  "scripts": {
+    "test": "node --test"
+  }
+}
