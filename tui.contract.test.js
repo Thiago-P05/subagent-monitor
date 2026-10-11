@@ -94,8 +94,8 @@ test('setup and cleanup keep retained list focus aligned with keymap mode', () =
   assert.match(source, /from '\.\/focus-lifecycle\.js'/)
 })
 
-test('cli.json keeps this monitor as the only subagent plugin entry', () => {
-  const configPath = new URL('../../cli.json', import.meta.url)
+test('documented fixture keeps this monitor as the only subagent plugin entry', () => {
+  const configPath = new URL('./fixtures/cli.sample.json', import.meta.url)
   const config = JSON.parse(fs.readFileSync(configPath, 'utf8'))
   const plugins = config.plugins
   assert.ok(Array.isArray(plugins))
@@ -103,6 +103,6 @@ test('cli.json keeps this monitor as the only subagent plugin entry', () => {
     const value = typeof entry === 'string' ? entry : entry?.package
     return typeof value === 'string' && value.includes('subagent')
   })
-  assert.deepEqual(monitor, ['./plugins/subagent-monitor'])
+  assert.deepEqual(monitor, ['./subagent-monitor'])
   assert.equal(plugins.includes('opencode-subagent-statusline'), false)
 })
