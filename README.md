@@ -2,6 +2,10 @@
 
 OpenCode V2 sidebar for child-session progress, recent completed work and navigation. Uses public V2 events/session data, not SQLite or status files.
 
+## Screenshots
+
+![Subagent progress sidebar](docs/images/subagents.png)
+
 ## Install
 
 Requires OpenCode V2 (plugin API 2.0.26) and Node.js 22+ for setup/tests. No npm release is required.
